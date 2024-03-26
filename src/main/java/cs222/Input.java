@@ -21,7 +21,7 @@ public class Input {
         grades[3] = checkFullA(toUpperCase(read()));
 
         System.out.println("What grade did you receive on the final exam?");
-        grades[4] = read();
+        grades[4] = toUpperCase(read());
 
         return grades;
     }
