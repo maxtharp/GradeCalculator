@@ -5,25 +5,25 @@ import static java.lang.Character.toUpperCase;
 
 public class Input {
     private final Scanner scanner = new Scanner(System.in);
-    public char[] grades = new char[4];
+    public char[] gradeValues = new char[5];
 
     public char[] getGrades() {
         System.out.println("How many assignments did you meet specifications for?");
-        grades[0] = read();
+        gradeValues[0] = read();
 
         System.out.println("How many achievements did you meet specifications for?");
-        grades[1] = read();
+        gradeValues[1] = read();
 
-        System.out.println("Did you meet specifications for the mid-semester self assessment?");
-        grades[2] = read();
+        System.out.println("Did you meet specifications for the mid-semester self assessment? (Y/N)");
+        gradeValues[2] = toUpperCase(read());
 
         System.out.println("What grade did you receive for iteration 3 of the final project?");
-        grades[3] = checkFullA(toUpperCase(read()));
+        gradeValues[3] = checkFullA(toUpperCase(read()));
 
-        System.out.println("What grade did you receive on the final exam?");
-        grades[4] = toUpperCase(read());
+        System.out.println("Did you meet specifications for the final exam? Did you meet the minimum? (Y/M/N)");
+        gradeValues[4] = toUpperCase(read());
 
-        return grades;
+        return gradeValues;
     }
 
     private char read() {
