@@ -7,6 +7,13 @@ public class Input {
     private final Scanner scanner = new Scanner(System.in);
     public char[] gradeValues = new char[5];
 
+
+    private char read() {
+        String grade = scanner.next();
+        return grade.charAt(0);
+    }
+
+
     public char[] getGrades() {
         System.out.println("How many assignments did you meet specifications for?");
         gradeValues[0] = read();
@@ -26,11 +33,6 @@ public class Input {
         return gradeValues;
     }
 
-    private char read() {
-        String grade = scanner.next();
-        return grade.charAt(0);
-    }
-
     private char checkFullA(char finalProjectGrade) {
         String response;
         if (finalProjectGrade == 'A') {
@@ -43,3 +45,4 @@ public class Input {
         return finalProjectGrade;
     }
 }
+
