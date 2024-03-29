@@ -6,7 +6,6 @@ public class Main {
         ConvertToLetters gradeCalculator = new ConvertToLetters();
         Calculator calculator = new Calculator();
         char[] inputGrades = gradeCalculator.getLetterGrades();
-        System.out.println(inputGrades);
 
         System.out.println("You earned a(n) " + calculator.calculate(inputGrades) +
                 " in CS222.");
